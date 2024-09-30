@@ -11,12 +11,9 @@
             Результаты поиска
           </h2>
           <div class="content-cards">
-
-            <app-card title="Марсианин 1"></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-
+            @for (film of films; track film.id) {
+            <app-card [film]="film"></app-card>
+            }
           </div>
         </div>
 
